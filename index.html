@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>人数</h1>
+    <span id="number"></span>
+  </body>
+</html>
+<script>
+  const randomNumbers = [1, 10, 27, 51, 9];
+  let index = 0;
+  setInterval(() => {
+    const number = randomNumbers[index % randomNumbers.length];
+    const element = document.getElementById("number");
+    element.innerText = number + "人";
+    index++;
+  }, 3000);
+</script>
