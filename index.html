@@ -15,7 +15,7 @@
   let index = 0;
   setInterval(() => {
     const number = randomNumbers[index % randomNumbers.length];
-    const element = document.getElementById("number");
+    const element = document.getElementById("waitingNum");
     element.innerText = number;
     index++;
   }, 3000);
