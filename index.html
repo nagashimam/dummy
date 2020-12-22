@@ -7,7 +7,7 @@
   </head>
   <body>
     <h1>人数</h1>
-    <span id="number"></span>
+    <span id="waitingNum">0</span><span>人</span>
   </body>
 </html>
 <script>
@@ -16,7 +16,7 @@
   setInterval(() => {
     const number = randomNumbers[index % randomNumbers.length];
     const element = document.getElementById("number");
-    element.innerText = number + "人";
+    element.innerText = number;
     index++;
   }, 3000);
 </script>
