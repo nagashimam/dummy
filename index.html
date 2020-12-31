@@ -5,18 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body>
-    <h1>人数</h1>
-    <span id="waitingNum">0</span><span>人</span>
-  </body>
+  <body></body>
 </html>
 <script>
   const randomNumbers = [1, 10, 27, 51, 9, 100, 317];
   let index = 0;
   setInterval(() => {
-    const number = randomNumbers[index % randomNumbers.length];
-    const element = document.getElementById("waitingNum");
-    element.innerText = number;
+    if (index % 2 === 0) {
+      document.getElementById("waitingNum")?.remove();
+    } else {
+      const element = document.createElement("span");
+      element.setAttribute("id", "waitingNum");
+      const number = randomNumbers[index % randomNumbers.length];
+      element.innerText = number;
+      document.body.appendChild(element);
+    }
+
     index++;
-  }, 500);
+  }, 1050);
 </script>
